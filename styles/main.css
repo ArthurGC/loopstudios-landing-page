@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  background-image: url(/images/mobile/image-hero.jpg);
+  background-image: url("https://raw.githubusercontent.com/ArthurGC/loopstudios-landing-page/main/images/mobile/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 2rem 1.5rem;
