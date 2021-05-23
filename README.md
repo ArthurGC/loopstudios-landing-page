@@ -1,6 +1,6 @@
 # Frontend Mentor - Loopstudios landing page solution
 
-This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Loopstudios landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/loopstudios-landing-page-N88J5Onjw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -42,34 +42,31 @@ I noticed that linear gradient is not supported to add a transition hover, and t
 
 ```html
 <picture class="section-2__images__img">
-              <h3 class="section-2__images__title">DEEP EARTH</h3>
-              <source
-                media="(min-width: 992px)"
-                srcset="images/desktop/image-deep-earth.jpg"
-              />
-              <img
-                src="images/mobile/image-deep-earth.jpg"
-                alt="the earth since outside"
-              />
-            </picture>
-```
-```css
-&__img::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, rgba(0,0,0,.5),rgba(0,0,0,0));
-            z-index: 100;
-        }
-        &__img:hover::before{
-            transition: all 1s ease-in-out;
-            background:rgba(225,0,255,.2);
-        }
+  <h3 class="section-2__images__title">DEEP EARTH</h3>
+  <source
+    media="(min-width: 992px)"
+    srcset="images/desktop/image-deep-earth.jpg"
+  />
+  <img src="images/mobile/image-deep-earth.jpg" alt="the earth since outside" />
+</picture>
 ```
 
+```css
+&__img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  z-index: 100;
+}
+&__img:hover::before {
+  transition: all 1s ease-in-out;
+  background: rgba(225, 0, 255, 0.2);
+}
+```
 
 ## Author
 
