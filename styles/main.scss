@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+
+$clr-white: hsl(0, 0%, 100%);
+$clr-black: hsl(0, 0%, 0%);
+$clr-dark-gray: hsl(0, 0%, 55%);
+$clr-very-dark-gray: hsl(0, 0%, 41%);
+
+$ff-alata: 'Alata', sans-serif; //400
+$ff-josefin: 'Josefin Sans', sans-serif; //300
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    overflow-x: hidden;
+}
+.hero{
+    width: 100%;
+}
+.header{
+    background-image: url(/images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1.5rem;
+    position: relative;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo{
+        width: 150px;
+        z-index: 100;
+        img{
+            width: 100%;
+        }
+    }
+    &__bar{
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background: $clr-black;
+        display: flex;
+        align-items: center;
+        top: 0;
+        left: 100%;
+        transition: left .8s, visibility 1s, opacity .4s;
+        padding: 0 2rem;
+        z-index: 50;
+        ul{
+            list-style: none;
+            li{
+                margin-bottom: 1.5rem;
+                a{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    color: $clr-white;
+                    font-family: $ff-josefin;
+                    font-weight: 300;
+                    font-size: 2rem;
+                    transition: color 1s;
+                    &:hover{
+                        color: rgb(225, 0, 255);
+                    }
+                }
+            }
+        }
+    }
+    &__hamb{
+        z-index: 100;
+        .hamburger{
+            cursor: pointer;
+        }
+        .close{
+            display: none;
+        }
+    }
+}
+.section-top{
+    margin: 9.7rem 0 11.1rem;
+    border: 2px solid $clr-white;
+    padding: 1.05rem 1.5rem;
+    &__title{
+        color: $clr-white;
+        font-family: $ff-josefin;
+        font-weight: 300;
+        font-size: 2.5rem;
+    }
+}
+.active{
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    transition: left .8s, visibility .8s, opacity .4s;
+}
+.content{
+    padding: 5.8rem 1.5rem;
+    background: $clr-white;
+}
+.section-1{
+    &-left{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    &-right{
+        text-align: center;
+        padding: 2.5rem 1rem;
+    }
+    &__title{
+        font-size: 1.9rem;
+        font-family: $ff-josefin;
+        font-weight: 300;
+        margin-bottom: 1rem;
+    }
+    &__dsc{
+        font-size: 15px;
+        font-family: $ff-alata;
+        color: $clr-dark-gray;
+        line-height: 1.6;
+        
+    }
+}
+.section-2{
+    margin-top: 3.3rem;
+    &__header{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__title{
+        font-size: 1.9rem;
+        font-family: $ff-josefin;
+        font-weight: 300;
+    }
+    &__btn{
+        display: none;
+    }
+
+    &__images{
+        margin: 2.6rem 0 1.9rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        
+    
+        &__img::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0,0,0,.5),rgba(0,0,0,0));
+            z-index: 100;
+        }
+        &__img:hover::before{
+            transition: all 1s ease-in-out;
+            background:rgba(225,0,255,.2);
+        }
+        &__img{
+            width: 100%;
+            position: relative;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
+        }
+        &__title{
+            position: absolute;
+            width: 40%;
+            left: 1.2rem;
+            bottom: 1.2rem;
+            color: $clr-white;
+            font-family: $ff-josefin;
+            font-weight: 300;
+            font-size: 1.4rem;
+            z-index: 200;
+        }
+    }
+    &__btns{
+        text-align: center;
+    }
+}
+.btn{
+    padding: 0rem 2rem 0rem;
+    font-family: $ff-josefin;
+    font-weight: bold;
+    background: $clr-white;
+    border: 2px solid $clr-black;
+    padding-top: 3px;
+    font-size: 13px;
+    line-height: 2.6;
+    letter-spacing: 4px;
+}
+.btn:hover,
+.btn:focus{
+    cursor: pointer;
+    animation-name: cover-background;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes cover-background {
+    100%{
+        box-shadow: inset 11rem 0 0 0 $clr-dark-gray;
+    }
+}
+
+.footer{
+    background: $clr-black;
+    color: $clr-white;
+    padding: 3.8rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    &__section-1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+    &__logo{
+        text-align: center;
+        img{
+            width: 70%;
+        }
+    }
+    &__menu{
+        ul{
+            list-style: none;
+            li{
+                text-align: center;
+                margin-bottom: 1rem;
+                a{
+                    text-decoration: none;
+                    color: $clr-white;
+                    font-family: $ff-alata;
+                    font-weight: 300;
+                    transition: color 1s;
+                    &:hover{
+                        color: rgb(225, 0, 255);
+                    }
+                }
+            }
+        }
+    }
+    &__section-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    &__icons{
+        i{
+            font-size: 1.7rem;
+            margin: 0 6px;
+            color: $clr-white;
+            transition: color 1s;
+            &:hover{
+                cursor: pointer;
+                color: rgb(225, 0, 255);
+            }
+        }
+    }
+    &__dsc{
+        h3{
+            font-size: 15px;
+            font-family: $ff-alata;
+            color: $clr-dark-gray;
+            line-height: 1.6;
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+    .header{
+        padding: 4.2rem 6rem;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        &__logo{
+            width: 190px;
+            z-index: 100;
+        }
+        &__bar{
+            all: unset;
+            ul{
+                display: inline-block;
+                li{
+                    all: unset;
+                    &:not(:last-child){
+                        margin-right: 1.45rem;
+                    }
+                    a{
+                        text-transform: none;
+                        font-family: $ff-alata;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        &__hamb{
+            display: none;
+        }
+    }
+    .section-top{
+        margin: 7.6rem 0 4.9rem;
+        padding: 1.68rem 1.5rem;
+        max-width: 50%;
+        &__title{
+            font-size: 3rem;
+        }
+    }
+    .content{
+        padding: 5.8rem 6rem;
+        background: $clr-white;
+    }
+    .section-1{
+        position: relative;
+        margin-bottom: 11.5rem;
+        &-left{
+            width: 65.7%;
+        }
+        &-right{
+            position: absolute;
+            top: 48.8%;
+            left: 51.4%;
+            background: $clr-white;
+            width: 65.7%;
+            text-align: left;
+            padding: 8.9% 8.8%;
+        }
+        &__title{
+            font-size: 2rem;
+            width: 75%;
+        }
+        &__dsc{
+            width: 21rem;
+            
+        }
+    }
+    .section-2{
+        margin-top: 3.3rem;
+        &__header{
+            justify-content: space-between;
+        }
+        &__title{
+            font-size: 2.9rem;
+        }
+        &__btn{
+            display: initial;
+        }
+    
+        &__images{
+            margin: 4.9rem 0 5.3rem;
+            display: inline-flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            &__img{
+                width: 30.75%;
+                &:nth-child(5){
+                    h3{
+                        width: 70%;
+                    }
+                }
+            }
+            &__title{
+                width: 58%;
+                left: 2.5rem;
+                bottom: 2rem;
+                font-size: 2rem;
+            }
+            
+        }
+        &__btns{
+            display: none;
+        }
+    }
+    .footer{
+        padding: 2.3rem 6rem;
+        flex-direction: row;
+        justify-content: space-between;
+        &__section-1{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__logo{
+            text-align: left;
+            img{
+                width: 70%;
+            }
+        }
+        &__menu{
+            ul{
+                li{
+                    display: inline-block;
+                    text-align: left;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        &__section-2{
+            align-items: flex-end;
+        }
+        &__dsc{
+            h3{
+                font-size: 15px;
+
+            }
+        }
+    
+    }
+}
+@media (min-width: 1440px) {
+    .header{
+        padding: 4.2rem 10.3rem;
+    }
+    .section-top{
+        max-width: 58.6%;
+        &__title{
+            font-size: 4.58rem;
+        }
+    }
+    .content{
+        padding: 5.8rem 10.2rem;
+    }
+    .section-1{
+        &__title{
+            font-size: 2.9rem;
+        }
+        &__dsc{
+            width: 28rem;  
+        }
+    }
+    .section-2{
+        &__images{
+            &__img{
+                width: 22.95%;
+            }       
+        }
+    }
+    .footer{
+        padding: 2.3rem 10.2rem;
+    
+    }
+}
