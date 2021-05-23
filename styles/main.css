@@ -69,12 +69,7 @@ body {
 }
 .navbar__hamb {
   z-index: 100;
-}
-.navbar__hamb .hamburger {
   cursor: pointer;
-}
-.navbar__hamb .close {
-  display: none;
 }
 
 .section-top {
@@ -448,4 +443,7 @@ body {
   .footer {
     padding: 2.3rem 10.2rem;
   }
+}
+.hide {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

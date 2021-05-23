@@ -73,12 +73,7 @@ body{
     }
     &__hamb{
         z-index: 100;
-        .hamburger{
-            cursor: pointer;
-        }
-        .close{
-            display: none;
-        }
+        cursor: pointer;
     }
 }
 .section-top{
@@ -459,4 +454,8 @@ body{
         padding: 2.3rem 10.2rem;
     
     }
+}
+
+.hide{
+    display: none;
 }
