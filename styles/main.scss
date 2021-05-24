@@ -258,6 +258,9 @@ body{
         gap: 1rem;
     }
     &__icons{
+        span{
+            display: none;
+        }
         i{
             font-size: 1.7rem;
             margin: 0 6px;

@@ -261,6 +261,9 @@ body {
   justify-content: center;
   gap: 1rem;
 }
+.footer__icons span {
+  display: none;
+}
 .footer__icons i {
   font-size: 1.7rem;
   margin: 0 6px;
